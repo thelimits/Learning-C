@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=|, initial-scale=1.0">
+     <!-- link for font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <!-- link jquery script -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- link for css -->
+     <link rel="stylesheet" href="public\Style\StyleIndex.css">
+    <title>Belajar Bahasa C</title>
+</head>
+<body>
+    <header id="head">
+        <div id = "logo">
+            <img src="image\1200px-C_Programming_Language.svg.png" alt="C">
+        </div>
+        <div id = "logo_text">
+            <div id = "teks">CTutorial4Fun</div>
+        </div>
+    </header>
+    <!-- content -->
+    <div id = "content_box">
+        <div id="judul">
+            Belajar Struct (C Programming Language)
+        </div>
+        <div id="pertayaan">
+            Apasih itu Struct ?
+        </div>
+        <div id =isi>
+            Structure atau struct adalah kumpulan dari beberapa variabel dengan <br/>
+            beragam tipe data yang dibungkus dalam satu varabel. <br/>
+            Cara penulisan syntax struct sebagai berikut:
+        </div>
+        <div id="syntax">
+            <div id="box">
+                <div id="box-syntax">
+                    <span style="font-weight: bold;">struct</span> name_structure {<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        dataType1 name_field1;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        dataType2 name_field2;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        …<br/>
+                        <br/>
+                    };
+                </div>
+            </div>
+        </div>
+        <div id="txt_contoh">Berikut contoh dari penggunaan Struct:</div>
+        <div id="syntax">
+            <div id="box">
+                <div id="box-syntax1" >
+                    <span style="font-weight: bold;">struct</span> pelanggan <span style="color: red;">{</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Name <span style="color: red;">[</span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Id<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Address<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Date<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Gender<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Number<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <br/>
+                    <span style="color: red;">};</span>
+                </div>
+            </div>
+        </div>
+        <button type="button" onclick="copyEvent('box-syntax1')">Copy Syntax</button>
+
+        <div id="isi">
+            Tipe data struct pelanggan telah dibuat. Ketika tipe struct dideklarasikan, <br/>
+            tidak ada penyimpanan atau memori yang dialokasikan. Pengalokasikan memori baru <br/>
+            dibuat ketika kita membuat variable atu object nya, untuk mengakses struct tersebut kita menggunakan 
+            dot syntax (.), Berikut cara membuat variable atau object dari struct:
+        </div>
+        <div id="syntax1">
+            <div id="box">
+                <div id="box-syntax2" >
+                    <span style="font-weight: bold;">int</span> main (<span style="font-weight: bold;">int</span>  argc,  <span style="font-weight: bold;">char</span> <span style="color: red;">*<span style="color: black;">agrv</span>[]){</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: black; font-weight: bold;">struct</span> pelanggan r1<span style="color: red;">;</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Nama Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Name<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan ID Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Id<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Alamat Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Address<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Tanggal Lahir Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Date<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Jenis Kelamin Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Gender<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Nomor Telepon Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Number<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <br/>
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Nama Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Name</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"ID Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Id</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Alamat Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Address</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Tanggal Lahir Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Date</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Jenis Kelamin Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Gender</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Nomor Telepon Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Number</span> <span style="color: red;"> );</span><br/>
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="font-weight: bold;">return </span> </span><span style="color: rgb(216, 0, 249);">0</span><span style="color: red;"> ;</span>
+                        <br/>
+                        <span style="color: red;">};</span>
+                </div>
+            </div>
+        </div>
+        <button type="button" onclick="copyEvent1('box-syntax2')">Copy Syntax</button>
+        <div id="txt_contoh">Berikut adalah full syntax dari penggunaan Struct:</div>
+        <div id="syntax2">
+            <div id="box1">
+                <div id="box-syntax3" >
+                    <span style="color:green ;">#include&lt;stdio.h&gt;</span>
+                    <br/>
+                    <span style="color:green ;">#include&lt;stdlib.h&gt;</span>
+                    <br/>
+                    <br/>
+                    <span style="font-weight: bold;">struct</span> pelanggan <span style="color: red;">{</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Name <span style="color: red;">[</span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Id<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Address<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Date<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Gender<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: blue;">char</span> Number<span style="color: red;">[</span></span><span style="color: rgb(216, 0, 249);">50</span><span style="color: red;">];</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <br/>
+                    <span style="color: red;">};</span>
+                    <br/>
+                    <br/>
+                    <span style="font-weight: bold;">int</span> main (<span style="font-weight: bold;">int</span>  argc,  <span style="font-weight: bold;">char</span> <span style="color: red;">*<span style="color: black;">agrv</span>[]){</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="color: black; font-weight: bold;">struct</span> pelanggan r1<span style="color: red;">;</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Nama Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Name<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan ID Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Id<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Alamat Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Address<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Tanggal Lahir Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Date<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Jenis Kelamin Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Gender<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Masukan Nomor Telepon Pelanggan: "</span> <span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        gets<span style="color: red;">(</span> r1<span style="color: red;">.</span>Number<span style="color: red;">);</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <br/>
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Nama Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Name</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"ID Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Id</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Alamat Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Address</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Tanggal Lahir Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Date</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Jenis Kelamin Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Gender</span> <span style="color: red;"> );</span><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        printf<span style="color: red;">(</span> <span style="color: blue;">"Nomor Telepon Pelanggan: %s\n "</span> <span style="color: red;">,</span> r1<span style="color: red;">.</span>Number</span> <span style="color: red;"> );</span><br/>
+                        <br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="font-weight: bold;">return </span> </span><span style="color: rgb(216, 0, 249);">0</span><span style="color: red;"> ;</span>
+                        <br/>
+                        <span style="color: red;">};</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="button" onclick="copyEvent2('box1')">Copy Syntax</button>
+            <button type="button" onclick="show()">Live Demo</button>
+        </div>
+        <div class="container">
+            <iframe class="ide" src="https://www.online-cpp.com/kERDhW8ZVQ" frameborder="0"></iframe>
+        </div>
+        <div id="txt_contoh">Berikut adalah video tutorial dalam penggunaan Struct:</div>
+        <div class="container-video">
+            <iframe class="video" src="https://drive.google.com/file/d/1DEpc6EQc_wKvuGAaQJTJatSRv7c9Op6T/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+    </div>
+    
+    <script>
+        function copyEvent(id)
+        {
+            var str = document.getElementById(id);
+            window.getSelection().selectAllChildren(str);
+            document.execCommand("Copy")
+        }
+        function copyEvent1(id)
+        {
+            var str = document.getElementById(id);
+            window.getSelection().selectAllChildren(str);
+            document.execCommand("Copy")
+        }
+        function copyEvent2(id)
+        {
+            var str = document.getElementById(id);
+            window.getSelection().selectAllChildren(str);
+            document.execCommand("Copy")
+        }
+        function show(){
+            if($("#content_box .container .ide").css('display') == 'none')
+                $("#content_box .container .ide").css('display', 'block');
+            else if ($("#content_box .container .ide").css('display') == 'block')
+                $("#content_box .container .ide").css('display', '');
+        }
+    </script>
+    
+</body>
+</html>
