@@ -9,6 +9,7 @@ body{
     min-height: 100vh;
     width: 100%;
     margin-bottom: 25px;
+    background-color: rgb(199, 244, 255);
 }
 
 div{
